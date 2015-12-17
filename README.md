@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/christianbladescb/golang15-builder:latest.svg)](https://imagelayers.io/?images=christianbladescb/golang15-builder:latest 'Get your own badge on imagelayers.io')
+
 # Golang 1.5 Builder
 
 Build tiny Docker images from your Go project.
