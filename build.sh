@@ -1,4 +1,5 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
+set -e
 
 if [ $(find /src -maxdepth 0 -type d -empty 2>/dev/null) ]; then
     echo "ERROR: must mount source to /src"
@@ -35,6 +36,10 @@ if [ -e "${destination}/vendor" ]; then
 fi
 
 export CGO_ENABLED=0
+
+pushd ${destination} > /dev/null
+go get
+popd > /dev/null
 
 go build -a ${canonicalname}
 
